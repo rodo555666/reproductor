@@ -1,7 +1,7 @@
 
 :root {
     --filtro:invert(90%);
-    --back: linear-gradient(rgb(45, 45, 173) ,rgb(6, 6, 6));
+    --back: linear-gradient(rgb(90, 87, 87) ,rgb(6, 6, 6));
     --play-bu:rgba(0, 0, 0, 0);
     --estrella:rgba(255, 255, 0, 0.405);
     --play:rgba(255, 255, 255, 0);
@@ -17,13 +17,25 @@
 
     grid-template-columns: repeat(3,max-content);
     grid-template-rows: max-content .5fr 1fr 1fr 1fr 1fr ;
-    background: linear-gradient(rgb(45, 45, 173) ,rgb(6, 6, 6));
+    background: linear-gradient(rgb(103, 103, 103) ,rgb(6, 6, 6));
     margin: auto;
     padding: 0%;
     height: auto;
     width: auto;
+   /* animation: gradient 5s ease infinite;*/
 }
 
+/*@keyframes gradient {
+	0% {
+		background:linear-gradient(rgb(239, 8, 8) ,rgb(6, 6, 6));
+	}
+	50% {
+		background:linear-gradient(rgb(103, 103, 103) ,rgb(6, 6, 6));
+	}
+	100% {
+		background:linear-gradient(rgb(42, 7, 102) ,rgb(6, 6, 6));
+	}
+}*/
 .card img { 
  grid-column: 1/4;
  grid-row: 1;
@@ -42,6 +54,7 @@ padding: auto;
 } 
 
 .card h2 { 
+    
     font-weight: 600;
     color: rgb(231, 234, 236);
     grid-column: 2;
@@ -130,7 +143,15 @@ padding: auto;
     border-radius: 100% 100% 0% 0%;*/
    
 }
-
+.btn {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-row: 1fr 1fr 1fr ;
+    height: 100%;
+    width: auto;
+    grid-row: 2/5;
+    grid-column: 1/4;
+}
 
 .siguiente {
     background: var(--back);
@@ -139,7 +160,7 @@ padding: auto;
     height: 100%;
     width: auto;
     grid-column: 3;
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .anterior { 
@@ -149,7 +170,7 @@ padding: auto;
     height: 100%;
     width: auto;
     grid-column: 1;
-    grid-row: 4;
+    grid-row: 3;
 }
 
 .estrella { 
@@ -158,7 +179,7 @@ padding: auto;
     background: none;
     margin: auto;
     padding: auto;
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 1;
     height: 100%;
     width: auto;
@@ -168,7 +189,7 @@ padding: auto;
     font-size: 2rem;
     color: var(--ra);
     background: none;
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 3;
     height: 100%;
     width: auto;
@@ -180,7 +201,7 @@ padding: auto;
     font-size: 2rem;
     color: var(--ra);
     background: none;
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 2;
     height: 100%;
     width: auto;

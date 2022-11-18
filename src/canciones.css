@@ -4,6 +4,8 @@
     --back: linear-gradient(rgb(45, 45, 173) ,rgb(6, 6, 6));
     --play-bu:rgba(0, 0, 0, 0);
     --estrella:rgba(255, 255, 0, 0.405);
+    --play:rgba(255, 255, 255, 0);
+    --ra:rgba(255, 255, 255, 0.305);
 }
 
 
@@ -68,11 +70,16 @@ padding: auto;
 
 
 .card button {
+    
     padding: 0%;
     border: none;
+    transition: all;
 }
 
 .card button:hover {
+    --ra:white;
+    transition:opacity 0% 1s;
+    --play:rgb(255, 255, 255);
     --estrella:rgb(255, 230, 0);
     --play-bu:rgba(0, 0, 0, 0.605);
     /*background-color: rgba(174, 174, 180, 0.823);*/
@@ -99,7 +106,7 @@ padding: auto;
     margin: auto;
 }
 .play i{
-    color: aliceblue;
+    color: var(--play);
     font-size: 10rem;
     height: auto;
     width: auto;
@@ -146,6 +153,7 @@ padding: auto;
 }
 
 .estrella { 
+    font-size: 2rem;
     color: var(--estrella);
     background: none;
     margin: auto;
@@ -154,4 +162,28 @@ padding: auto;
     grid-column: 1;
     height: 100%;
     width: auto;
+}
+
+.aleatorio {
+    font-size: 2rem;
+    color: var(--ra);
+    background: none;
+    grid-row: 2;
+    grid-column: 3;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    padding: auto;
+}
+
+.repetir {
+    font-size: 2rem;
+    color: var(--ra);
+    background: none;
+    grid-row: 2;
+    grid-column: 2;
+    height: 100%;
+    width: auto;
+    margin: auto;
+    padding: auto;
 }

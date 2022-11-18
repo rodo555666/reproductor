@@ -25,6 +25,7 @@ function canciones() {
 
     const [ ct, setct ] = useState(c[state].currentTime);
     const [ t, sett ] = useState(0);
+    const [ pimg, setpimg ] = useState(<i className="fa-solid fa-play"></i>);
  
    /* useEffect(() => {
      if (pl == true) {
@@ -39,7 +40,7 @@ function canciones() {
        
     console.log(datos)
 
-    
+
 
 
     return (
@@ -49,21 +50,24 @@ function canciones() {
             <h3>{datos[state].artista}</h3>
             <h2>{datos[state].cancion}</h2>
             <h4>{datos[state].disco}</h4>
-            <button className='estrella'> <i className="fa-solid fa-star"></i></button>     
+            <button className='estrella'> <i className="fa-solid fa-star"></i></button> 
+            <button className='aleatorio'><i className="fa-solid fa-shuffle"></i></button>
+            <button className='repetir'><i className="fa-solid fa-repeat"></i></button>    
             <audio> <source src={datos[state].sound} type="audio/mp3" />  </audio>
             <div className='tiempo'>  <p>{minutes} </p> </div>
 
             <button onClick={()=> { setpl(true)
-            
+            setpimg (<i className="fa-solid fa-play"></i>)
            if (pl == false) {
             sett(t+1)
-          
+            setpimg ( <i className="fa-solid fa-pause"></i>)
+            
              c[state].play()} else { setpl(false)
                 sett(0) 
                
              c[state].pause()  }
             
-            }} className="play"><i className="fa-solid fa-pause"></i></button>
+            }} className="play"> <div>{pimg}</div></button>
 
 
 

@@ -6,7 +6,17 @@
     --estrella:rgba(255, 255, 0, 0.405);
     --play:rgba(255, 255, 255, 0);
     --ra:rgba(255, 255, 255, 0.305);
+    --imgportada:500px;
 }
+
+@media (max-width: 900px) {
+    :root {
+        --imgportada:250px;
+    }
+}
+
+
+
 
 
 .card { 
@@ -39,7 +49,7 @@
 .card img { 
  grid-column: 1/4;
  grid-row: 1;
-height: 500px;
+height: var(--imgportada);
 width: auto;
 margin: auto;
 padding: auto;

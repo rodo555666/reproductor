@@ -40,6 +40,7 @@ function canciones() {
     };
 
     const ante = ()=> { setState(state - 1)
+        setpimg (<i className="fa-solid fa-play"></i>)
         setpl(false)
        c[state].pause()
        c[state].currentTime = 0
@@ -47,6 +48,7 @@ function canciones() {
 
 
     const sig = () => { setState(state + 1)
+        setpimg (<i className="fa-solid fa-play"></i>)
         c[state].pause()
         setpl(false)
         c[state].currentTime = 0

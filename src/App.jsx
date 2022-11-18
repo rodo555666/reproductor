@@ -11,9 +11,10 @@ function App() {
  
  const js = respon.json()
  settodos(js)
- console.log(todos)
+ console.log(js)
   }
 
+  
   useEffect(() => {
     fetchpi()
    }, [])

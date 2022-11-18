@@ -1,0 +1,25 @@
+[ { 
+    "sound": "02 Judas Priest - Electric Eye.mp3",   
+    "artista": "Judas Priest",
+    "cancion":"Electric Eye",
+    "disco" :"Screaming For Vengeance",
+    "portada": "judas.jpg"
+   
+    }, 
+    { 
+"sound":"Municipal Waste - Grave Dive.mp3",   
+"artista": "Municipal Waste",
+"cancion":"Grave Dive",
+"disco" :"Electrified Brain",
+"portada": "tapa.jpg"
+
+}, 
+{ 
+    "sound": "02 Slayer - Disciple.mp3",   
+    "artista": "Slayer",
+    "cancion":"Disciple",
+    "disco" :"God Hates Uss All",
+    "portada": "slayer.jpg"
+    
+    }
+]

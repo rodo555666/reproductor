@@ -1,5 +1,6 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import datos from './json/datos.json'
 import "./canciones.css";
 
 
@@ -10,35 +11,10 @@ import "./canciones.css";
 
 let c = [new Audio('02 Judas Priest - Electric Eye.mp3'),new Audio('Municipal Waste - Grave Dive.mp3'),new Audio('02 Slayer - Disciple.mp3')] ;
 
-let arr = [ { 
-    sound: '02 Judas Priest - Electric Eye.mp3',   
-    artista: "Judas Priest",
-    cancion:"Electric Eye",
-    disco :"Screaming For Vengeance",
-    portada: "judas.jpg",
-    play: "./svg/bx-play.svg"
-    }, 
-    { 
-sound:'Municipal Waste - Grave Dive.mp3',   
-artista: "Municipal Waste",
-cancion:"Grave Dive",
-disco :"Electrified Brain",
-portada: "tapa.jpg",
-play: "./svg/bx-play.svg"
-}, 
-{ 
-    sound: '02 Slayer - Disciple.mp3',   
-    artista: "Slayer",
-    cancion:"Disciple",
-    disco :"God Hates Uss All",
-    portada: "slayer.jpg",
-    play: "./svg/bx-play.svg"
-    }
-];
-
-let ctime = (c[0].currentTime);
 
 
+
+let minutes = Math.floor(c[0].currentTime / 60);
 
 
 
@@ -48,31 +24,46 @@ function canciones() {
     const [ pl, setpl ] = useState(false);
 
     const [ ct, setct ] = useState(c[state].currentTime);
+    const [ t, sett ] = useState(0);
+ 
+   /* useEffect(() => {
+     if (pl == true) {
+        sett(t+1) 
+         minutes = Math.floor(t / 60)
+     }
+    
+      return () => {
+      
+      }
+    }, [t])*/
+       
+    console.log(datos)
 
-    function name() {
-        setct(c[state].currentTime)
-    }
-
-    c[state].onplay = () => {  };
+    
 
 
     return (
         <div>
         <article className='card'>
-            <img src={arr[state].portada} alt="vite" />
-            <h3>{arr[state].artista}</h3>
-            <h2>{arr[state].cancion}</h2>
-            <h4>{arr[state].disco}</h4>
-            <audio> <source src={arr[state].sound} type="audio/mp3" />  </audio>
-            <div className='tiempo'>  <p>{ct} </p> </div>
+            <img src={datos[state].portada} alt="vite" />
+            <h3>{datos[state].artista}</h3>
+            <h2>{datos[state].cancion}</h2>
+            <h4>{datos[state].disco}</h4>
+            <button className='estrella'> <i className="fa-solid fa-star"></i></button>     
+            <audio> <source src={datos[state].sound} type="audio/mp3" />  </audio>
+            <div className='tiempo'>  <p>{minutes} </p> </div>
 
             <button onClick={()=> { setpl(true)
-             console.log(c[state].currentTime)
+            
            if (pl == false) {
+            sett(t+1)
+          
              c[state].play()} else { setpl(false)
+                sett(0) 
+               
              c[state].pause()  }
             
-            }} className="play"><img src={arr[state].play} alt="play" /></button>
+            }} className="play"><i className="fa-solid fa-pause"></i></button>
 
 
 

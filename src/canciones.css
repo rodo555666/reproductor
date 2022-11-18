@@ -1,0 +1,117 @@
+
+:root {
+    --filtro:invert(90%);
+    
+}
+
+
+.card { 
+    font-size: 1.2rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: max-content 1fr 1fr 1fr 1fr 1fr ;
+    background-color: rgb(40, 40, 64);
+    background: linear-gradient(rgb(45, 45, 173) ,rgb(6, 6, 6));
+    margin: auto;
+    padding: 0%;
+    height: auto;
+    width: auto;
+}
+
+.card img { 
+ grid-column: 1/4;
+ grid-row: 1;
+height: 500px;
+width: auto;
+margin: auto;
+padding: auto;
+}
+
+.card h3 { 
+    font-weight: 600;
+    color: rgb(193, 188, 188);
+    grid-column: 2;
+ grid-row: 2;
+
+} 
+
+.card h2 { 
+    font-weight: 600;
+    color: rgb(231, 234, 236);
+    grid-column: 2;
+    grid-row: 3;
+   
+}
+.card h4 { 
+    font-weight: 600;
+    color: rgb(206, 201, 201);
+    grid-column: 2;
+    grid-row: 4;
+}
+
+.card audio { 
+    grid-column: 1/4;
+    grid-row: 5;
+}
+
+
+.card button img {
+    filter:var(--filtro);
+     height: 30px;
+    width: 30px;
+ 
+}
+
+
+.card button {
+    padding: 0%;
+    border: none;
+}
+
+.card button:hover {
+    background-color: rgba(240, 242, 245, 0.81);
+   --filtro:invert(10%);
+}
+
+
+.play { 
+    height: 100%;
+    width: auto;
+    grid-column: 2;
+    grid-row: 6;
+    background-color: rgba(0, 255, 255, 0);
+}
+
+
+
+
+
+.tiempo { 
+    color: aliceblue;
+    grid-column: 2;
+    grid-row: 5;
+    font-size: 2rem;
+}
+
+
+.siguiente {
+  
+    background-color: rgba(102, 102, 103, 0);
+    height: 100%;
+    width: auto;
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.anterior { 
+    background-color: rgba(211, 28, 25, 0);
+    height: 100%;
+    width: auto;
+    grid-column: 1;
+    grid-row: 3;
+}
+
+
